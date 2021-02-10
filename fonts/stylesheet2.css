@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Futura';
+    src: url('Futura-Thin.woff2') format('woff2'),
+        url('Futura-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura';
+    src: url('Futura-Bold.woff2') format('woff2'),
+        url('Futura-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'a_FuturaRound';
+    src: url('AFuturaRound.woff2') format('woff2'),
+        url('AFuturaRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura Bk';
+    src: url('Futura-Book.woff2') format('woff2'),
+        url('Futura-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

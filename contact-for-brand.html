@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LabX</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="images/favicon.png" />
+    <link rel="apple-touch-icon" href="images/favicon.png" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- animate -->
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- owl carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <!-- jquery fresco -->
+    <link rel="stylesheet" href="css/fresco.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <!-- Main Style -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script> 
+  
+    <script type="text/javascript"> 
+        function sendEmail() { 
+            var _name = document.getElementById('name').value
+            var _email = document.getElementById('email').value
+            var _phoneNumber = document.getElementById('phone-number').value
+            var _company = document.getElementById('company').value
+            var _message = document.getElementById('message').value
+
+            Email.send({ 
+                Host: "smtp.gmail.com", 
+                Username: "dhimas.hertianto@bubu.com", 
+                Password: "akugantengbangeth123", 
+                To: ['deandra.vladrynca@bubu.com', 'dhimas.hertianto@bubu.com'], 
+                From: 'Labxindonesia.co@gmail.com', 
+                Subject: "LabX Contact for Brand", 
+                Body: `
+                <h2>Contact For Brand</h2>
+                <h4>Name : ${_name}</h4>
+                <h4>email : ${_email}</h4>
+                <h4>phoneNumber : ${_phoneNumber}</h4>
+                <h4>company : ${_company}</h4>
+                <h4>message : ${_message}</h4>
+                `
+                // html: "<h1>GeeksforGeeks</h1><p>A computer science portal</p>"
+            }) 
+            .then(function (message) { 
+                console.log(message)
+                alert("Data Sudah berhasil di input")
+            }).catch(function (error){
+                alert(error)
+            })
+        } 
+    </script> 
+</head>
+
+<body>
+    <!-- menu mobile -->
+    <div class="wrap-menu-mobile-full">
+        <div class="wrap-bt-close-menu-res">
+            <i class="fa fa-close bt-close-menu-mobile"></i>
+        </div>
+        <ul class="menu-nav-mobile">
+            <li><a href="about-us.html">About</a></li>
+            <li><a href="index.html#colaboration">Impact Collaboration</a></li>
+            <li><a href="index.html#gallery">LabX Gallery</a></li>
+            <li><a href="index.html#media">Media</a></li>
+            <li class="custom-contact-menu-mobile">
+                <a href="contact-for-brand.html">Contact For Brand</a>
+                <br>
+                <a href="contact-for-kol.html">Contact For KOL</a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- menu top -->
+    <div class="wrap-logo-main-menu-top">
+        <div class="logo-img">
+            <a href="index.html">
+                <img src="images/logo.png" alt="">
+            </a>
+        </div>
+        <div class="wrap-main-menu-top">
+            <ul class="main-menu-top">
+                <li><a href="about-us.html">About</a></li>
+                <li><a href="index.html#colaboration">Impact Collaboration</a></li>
+                <li><a href="index.html#gallery">LabX Gallery</a></li>
+                <li><a href="index.html#media">Media</a></li>
+                <li class="custom-contact-menu bt-show-contact-dropdown"><a href="javascript:void(0)">Contact</a></li>
+            </ul>
+            <div class="bt-icon-burger-menu-mobile">
+                <i class="fa fa-bars bt-burger-show-menu"></i>
+            </div>
+        </div>
+        <!-- contact dropdown -->
+        <div class="contact-dropdown">
+            <ul>
+                <li><a href="contact-for-brand.html">Contact For Brand</a></li>
+                <li><a href="contact-for-kol.html">Contact For KOL</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- section form contact -->
+    <div class="wrap-section-contact-form">
+        <h2 class="heading-title-section-contact-form wow fadeInDown" data-wow-duration="0.7s">
+            We’d Love to Hear from You. <br> Let’s Get in Touch.
+        </h2>
+        <div class="wrap-form-contact wow fadeInUp" data-wow-duration="0.7s">
+            <form action="javascript:sendEmail()" method="POST">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="form-contact-input">
+                            <!-- row -->
+                            <div class="row-contact-form">
+                                <div class="item-form-input-c-left">
+                                    <h3 class="title-form-contact">
+                                        Name
+                                    </h3>
+                                    <input type="text" id="name" name="name" class="f-input-contact" required>
+                                </div>
+                                <div class="item-form-input-c-right">
+                                    <h3 class="title-form-contact">
+                                        E-mail Address
+                                    </h3>
+                                    <input type="text" id="email" name="email" class="f-input-contact" required>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <!-- row -->
+                            <div class="row-contact-form">
+                                <div class="item-form-input-c-left">
+                                    <h3 class="title-form-contact">
+                                        Phone Number
+                                    </h3>
+                                    <input type="text" id="phone-number" name="phone number" class="f-input-contact" required>
+                                </div>
+                                <div class="item-form-input-c-right">
+                                    <h3 class="title-form-contact">
+                                        Your Company
+                                    </h3>
+                                    <input type="text" id="company" name="company" class="f-input-contact" required>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <!-- row -->
+                            <div class="row-contact-form">
+                                <div class="item-form-input-c-full">
+                                    <h3 class="title-form-contact">
+                                        Fill Message
+                                    </h3>
+                                    <textarea name="message" id="message" class="text-message-contact" required></textarea>
+                                </div>
+                            </div>
+                            <!-- send message -->
+                            <input type="submit" class="bt-send-meesage-contact" value="Send Message">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="info-contact-email-phone">
+                            <div class="item-contact-email">
+                                <h4 class="title-contact-1">E-mail:</h4>
+                                <h4 class="title-contact-2">Labxindonesia.co@gmail.com</h4>
+                            </div>
+                            <div class="item-contact-email">
+                                <h4 class="title-contact-1">Phone:</h4>
+                                <h4 class="title-contact-2">021-7279-7608</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- footer -->
+    <div class="wrap-main-footer">
+        <div class="main-footer-menu-logo-link">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="logo-bubu-footer">
+                        <img src="images/logobubufooter.png" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-link-cta-bot">
+                        <h3 class="head-title-footer-link-cta">
+                            About Us
+                        </h3>
+                        <ul class="menu-lnk-cta-bot-foo">
+                            <li><a href="about-us.html">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-link-cta-bot">
+                        <h3 class="head-title-footer-link-cta">
+                            More
+                        </h3>
+                        <ul class="menu-lnk-cta-bot-foo">
+                            <li><a href="https://startupindonesia.co/" target="_blank">Startupindonesia.co</a></li>
+                            <li><a href="https://bubu.com" target="_blank">Bubu.com</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="footer-link-cta-bot">
+                        <h3 class="head-title-footer-link-cta">
+                            Conntact Us
+                        </h3>
+                        <ul class="menu-lnk-cta-bot-foo">
+                            <li>Labxindonesia.co@gmail.com</li>
+                            <li>+62 817-2311-127</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-footer-address-social-media">
+            <h4 class="title-address-copyright-footer">
+                Jakarta, Indonesia
+                <br>
+                ©2020 LabXGallery. All rights reserved.
+            </h4>
+            <div class="wrap-social-media-link-icon">
+                <ul class="social-media-link-icon">
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/jquery-migrate-1.2.1.js"></script>
+    <script src="js/jquery.marquee.min.js"></script>
+    <script src="js/fresco.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+        //running image
+        $('.running-text').marquee({
+            duplicated: true,
+            delayBeforeStart: 0
+        });
+    </script>
+</body>
+
+</html>

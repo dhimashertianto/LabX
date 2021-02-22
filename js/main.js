@@ -97,7 +97,7 @@
             loop: false,
             autoplayTimeout: 9000,
             autoplay: true,
-            touchDrag: true,
+            touchDrag: false,
             mouseDrag: false,
             margin: 10,
             // animateIn: 'fadeIn',
@@ -108,7 +108,7 @@
             dots: false,
             smartSpeed: 1000,
             // center: true,
-            items: 1
+            items: 1,
         });
 
         $(".i-nav-gallery-slider-prev").on("click", function () {
